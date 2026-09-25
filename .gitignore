@@ -1,0 +1,5 @@
+# Runtime state written by the skills (session ids, reports, quota history)
+**/state/
+__pycache__/
+.DS_Store
+.commandcode/
