@@ -104,19 +104,6 @@ checks) go to Gemini with an explicit file list. Gemini's answer is treated as
 an opinion: every finding is checked against the real code before anything
 changes.
 
-## Lessons learned
-
-- **Providers disappear.** In September 2026 one of my backends (OpenCode Go)
-  vanished overnight and the implementer had to move to Command Code within an
-  afternoon. Keep the vendor-specific part thin.
-- **Headless agents withhold the shell.** Command Code's print mode refuses
-  shell commands unless you run it with `--yolo` — so the safety has to come
-  from a deny list in a settings file (see `examples/`) plus the git guard.
-- **A subagent's report about its own scope is unreliable.** Diff against the
-  list of files you allowed, every time.
-- **Say when a check didn't run.** If an external review fails for lack of
-  quota, the workflow says so instead of silently skipping it.
-
 ## If you want to try it
 
 You will need Claude Code with the superpowers plugin, `jq`, and whichever
